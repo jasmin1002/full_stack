@@ -1,0 +1,1 @@
+File Handling in Python: This task demonstrates one of the usages of file handling in python using read() method of the file object, after open() method, to read the content of the file within read_file_content function and count_word function counts the number of words in such file
