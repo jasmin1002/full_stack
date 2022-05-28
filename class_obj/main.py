@@ -12,7 +12,7 @@ class Student:
 
     # Modify age
     def change_age(self, age):
-        self.age = age
+        self.age = int(age)
 
     # Print score
     def get_score(self):
@@ -33,4 +33,8 @@ Bob.add_track("UI/UX")
 Bob.get_score()
 
 print(Bob.__dict__)
+
+Files = Student("Files", 27, ["General", "Full Stack"], 98.23)
+Files.get_score()
+print(Files.__dict__)
 
