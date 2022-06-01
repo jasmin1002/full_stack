@@ -6,7 +6,7 @@ options = {
     'P': 'Paper'
 }
 
-# Initialize player and opponent choice
+# Init function
 def init(options={}):
     player_choice = input("Pick an option (S, R, P): ")
     
@@ -19,7 +19,7 @@ def init(options={}):
 
     return [player_choice.upper(), computer_choice]
 
-# Check for tie (same move between player and opponent)
+# Check for tie (same moves between player and opponent)
 def isTie(player='', computer=''):
     if player == computer:
         print('Tie: the same moves\n')
