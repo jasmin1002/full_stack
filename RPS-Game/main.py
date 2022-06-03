@@ -19,21 +19,21 @@ def init(options={}):
 
     return [player_choice.upper(), computer_choice]
 
-# Check for tie (same moves between player and opponent)
+# Return true for same moves between players
 def isTie(player='', computer=''):
     if player == computer:
         print('Tie: the same moves\n')
         return True
 
-# Decide the winner between player and opponent
-def decide_winner(options=options, player='', opponent=''):
-    # Possible winning configuration
+# Decides winner
+def decide_winner(player='', opponent='', options=options):
+    # Possible winning configurations
     winningCombo = [['R', 'S'], ['S', 'P'], ['P', 'R']]
 
     for combo in winningCombo:
         output = "{} beats {}\n{} wins."
         
-        # Select winner by R > S, S > P, or P > R
+        # Decides winner base on: R > S, S > P, P > R
         if player in combo and opponent in combo:
             if combo.index(player) < combo.index(opponent):
                 output = output.format(options[player], options[opponent], 'Player')
@@ -46,10 +46,11 @@ def decide_winner(options=options, player='', opponent=''):
 # Initialize both player and opponent
 player, computer = init(options)
 
-# Print players moves
+# Prints players moves
 print(f"Player({options[player]}) : Computer({options[computer]})\n")
-if isTie(player, computer):
+while (isTie(player, computer)):
     player, computer = init(options)
+    print(f"Player({options[player]}) : Computer({options[computer]})\n")
 
-# Choose winner 
-decide_winner(options, player, computer)
+# Choose winner
+decide_winner(player, computer)
