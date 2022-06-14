@@ -1,0 +1,109 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /**** Primary-colors: Box **************/
+    --bright-orange-b: hsl(31, 77%, 52%);
+    --dark-cyan-b: hsl(184, 100%, 22%);
+    --very-dark-cyan-b: hsl(179, 100%, 13%);
+
+    /***** Paragraph color ****************/
+    --transparent-white-p: hsla(0, 0%, 100%, 0.75);
+
+    /*****Btn, background, headings colors ****************/
+    --very-light-gray-bbh: hsl(0, 0%, 95%);
+
+    /*** basic size for letters ***/
+    --gly-basic: 1.5rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lexend-Deca', sans-serif;
+    font-size: var(--gly-basic);
+    line-height: 1.2;
+    background-color: var(--very-light-gray-bbh);
+}
+
+.container {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.heading-primary {
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: var(--very-light-gray-bbh);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.vehicle {
+    color: var(--transparent-white-p);
+    font-size: var(--gly-basic);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.vehicle-logo {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.vehicle-description {
+    margin-bottom: 7rem;
+    /* text-align: justify; */
+}
+
+
+.sedans {
+    background-color: var(--bright-orange-b);
+}
+
+.suvs {
+    background-color: var(--dark-cyan-b);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan-b)
+}
+
+.luxury > .btn {
+    color: var(--dark-cyan-b);
+}
+
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: 2px solid transparent;
+    background-color: var(--very-light-gray-bbh);
+    font-weight: 600;
+}
+
+.btn:active,
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid var(--very-light-gray-bbh);
+    color: var(--very-light-gray-bbh);
+}
+
+.btn-sedans {
+    color: var(--bright-orange-b);
+}
+
+.btn-suv {
+    color: var(--dark-cyan-b);
+}
+
+.btn-luxury {
+    color: var(--very-dark-cyan-b);
+}
