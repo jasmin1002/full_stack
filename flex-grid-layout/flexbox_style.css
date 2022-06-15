@@ -129,15 +129,13 @@ body {
         max-width: 95vw;
         min-height: 40rem;
         width: 83rem;
-        margin: 5rem auto;
+        margin: 3rem auto;
         background-color: var(--very-light-gray-bbh);
         
         display: flex;
-        row-gap: 2px;
     }
     
     .flex-item {
-        /* background-color: #ff0037; */
         padding: 5rem 2.6rem;
         
         flex: 1 
