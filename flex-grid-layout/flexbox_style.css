@@ -129,7 +129,7 @@ body {
         max-width: 95vw;
         min-height: 40rem;
         width: 83rem;
-        margin: 10rem auto;
+        margin: 5rem auto;
         background-color: var(--very-light-gray-bbh);
         
         display: flex;
