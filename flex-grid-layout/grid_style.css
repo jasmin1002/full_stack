@@ -27,6 +27,16 @@
     --gly-basic: 1.5rem;
 }
 
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: var(--gly-basic);
+    font-family: sans-serif;
+    line-height: 1.2;
+}
+
 .container {
     width: 50rem;
     background-color: var(--deep-purple-b);
