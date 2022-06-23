@@ -1,10 +1,13 @@
+// Select output UI elements
 const output = document.querySelector('.result');
 const btn = document.querySelector('.btn');
 
+// Request for inputs (Numbers and operator)
 let firstNumber = prompt("Enter first number: ", 0);
 const optr = prompt("Choose an operator from *, /, +, and -: ");
 let secondNumber = prompt("Enter second number: ", 0);
 
+// Basic arithmetic operations
 function add (a, b) {
     return a + b;
 }
@@ -21,11 +24,8 @@ function divide (a, b) {
     return a / b
 }
 
-
+// Compute or process on given inputs
 function compute (optr, a, b) {
-    // firstNumber = Number(a);
-    // secondNumber = Number(b);
-
     if (optr === '/' && Number(b) === 0) {
         return `${Number(a)} ${optr} ${Number(b)} = Undefined`
 
@@ -44,8 +44,10 @@ function compute (optr, a, b) {
     }
 }
 
+// Support operators
 const validOperators = ['*', '+', '/', '-'];
 
+// Select appropriate operation base on given operator
 const select = {
     '*': multiply,
     '+': add,
@@ -53,9 +55,13 @@ const select = {
     '-': subtract
 }
 
+// Display result
 output.textContent = compute(optr, firstNumber, secondNumber);
 
+// Perform another arithmetic operation
 btn.addEventListener('click', () => {
     window.location.reload(true);
 })
+
+// Print to the console (Debugging purpose)
 console.log(compute(optr, firstNumber, secondNumber))
